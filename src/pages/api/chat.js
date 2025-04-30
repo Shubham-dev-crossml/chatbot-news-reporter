@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     let extractedInfo = "";
     
     if (searchResults.organic_results && searchResults.organic_results.length > 0) {
-      const topResults = searchResults.organic_results.slice(0, 3);
+      const topResults = searchResults.organic_results;
       
       extractedInfo = topResults.map(result => 
         `Title: ${result.title}\nSnippet: ${result.snippet}\nLink: ${result.link}`
